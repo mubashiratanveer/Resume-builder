@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d0d6de;
+    
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.resume-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 20px;
+
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    
+}
+.button {
+    background-color: skyblue;
+    color: black;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.resume-container h1, .resume-container h2 {
+    margin-top: 0;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    color: #00bcd4;
+    border-bottom: 2px solid #00bcd4;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.topHeading{
+    color: #00bcd4;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+.editable {
+    border: 1px dashed #ddd;
+    padding: 20px;
+    min-height: 50px;
+    cursor: text;
+} 
+ 
+

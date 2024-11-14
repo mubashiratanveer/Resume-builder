@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  <body>
+    <div class="form-container">
+      <h2 class="topHeading">Resume Builder Form</h2>
+      <form id="resumeForm">
+        <div class="form-group">
+          <label for="name"> Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="username"
+            required
+          />
+        </div>
+        <fieldset>
+          <legend class="topHeading">Personal Information</legend>
+          <br />
+          <div class="form-group">
+            <label for="fatherName">Father Name</label>
+            <input type="text" id="fatherName" name="fatherName" required />
+          </div>
+          <div class="form-group">
+            <label for="photo">Upload Photo</label>
+            <input
+              type="file"
+              name="photo"
+              id="photo"
+              accept="image/*"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="number" id="phoneNumber" name="phoneNumber" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend class="topHeading">Education</legend>
+          <br />
+          <div class="form-group">
+            <label for="degree">Degree</label>
+            <input type="text" name="Degree" id="degree" required />
+            <label for="school">School</label>
+            <input type="text" name="school" id="school" required />
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend class="topHeading">Work Experience</legend>
+          <div class="form-group">
+            <label for="workExperience">Details</label>
+            <textarea
+              id="workExperience"
+              name="workExperience"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend class="topHeading">Skills</legend>
+          <div class="form-group">
+            <label for="skills">List your skills:</label>
+            <textarea id="skills" name="skills" rows="3" required></textarea>
+          </div>
+        </fieldset>
+
+        <button type="button" onclick="generateResume()" class="button">
+          Generate Resume
+        </button>
+      </form>
+    </div>
+
+    <div class="resume-container" id="resumeContainer" style="display: none">
+      <h1 id="nameDisplay"></h1>
+      <p><strong>Father Name:</strong> <span id="fatherNameDisplay"></span></p>
+      <p><strong>Phone:</strong> <span id="phoneNumberDisplay"></span></p>
+      <p><strong>Email:</strong> <span id="emailDisplay"></span></p>
+      <div class="section">
+        <h2>Education</h2>
+        <div
+          id="educationDisplay"
+          class="editable"
+          contenteditable="true"
+        ></div>
+      </div>
+      <div class="section">
+        <h2>Work Experience</h2>
+        <div
+          id="workExperienceDisplay"
+          class="editable"
+          contenteditable="true"
+        ></div>
+      </div>
+      <div class="section">
+        <h2>Skills</h2>
+        <div id="skillsDisplay" class="editable" contenteditable="true"></div>
+      </div>
+
+      <div>
+        <button onclick="shareResume()" class="button">Share Resume</button
+        ><br />
+        <button onclick="downloadResume()" class="button">
+          Download as PDF</button
+        ><br />
+        <button onclick="editResume()" class="button">Edit Resume</button><br />
+      </div>
+    </div>
+    <script src="resume.js"></script>
+    
+
+  </body>
+</html>
